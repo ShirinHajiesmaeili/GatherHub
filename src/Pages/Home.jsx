@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import EventCard from "../components/EventCard";
+import EventCard from "../Components/EventCard";
 
 const Home = () => {
   const [allEvents, setAllEvents] = useState([]);
@@ -13,7 +13,7 @@ const Home = () => {
 
   return (
     <main className="max-w-screen-2xl px-4 mx-auto my-4">
-      <div className="auto-cols-max justify-items-center gap-12">
+      <div className=" grid grid-cols-3 auto-cols-max justify-items-center gap-12">
         {allEvents.map((event) => (
           <EventCard key={event.id} event={event} />
         ))}

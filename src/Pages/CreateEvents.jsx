@@ -28,7 +28,7 @@ const CreateEvent = () => {
       body: JSON.stringify(eventDetails),
     };
 
-    fetch("http://localhost:3001/api/events", fetchOptions)
+    fetch("http://localhost:3001/api/events?page=1&limit=20", fetchOptions)
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
@@ -36,6 +36,7 @@ const CreateEvent = () => {
       })
       .catch((err) => console.log(err));
   };
+
   return (
     <main className="flex items-center justify-center m-14">
       <form

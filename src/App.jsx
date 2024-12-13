@@ -11,7 +11,7 @@ import SignIn from "./Pages/SignIn";
 import SignUp from "./Pages/SignUp";
 import EventDetails from "./Pages/EventDetails";
 import Error from "./Components/Error";
-import { UserProvider } from "./Context/userContext";
+import { UserProvider } from "./context/userContext";
 import ProtectedLayout from "./Layout/ProtectedLayout";
 
 const router = createBrowserRouter(
@@ -24,6 +24,13 @@ const router = createBrowserRouter(
       </Route>
       <Route path="signin" element={<SignIn />} />
       <Route path="signup" element={<SignUp />} />
+      {/* <Route path="shows" element={<Shows />} />
+      <Route path="events" element={<Events />} />
+      <Route path="concerts" element={<Concerts />} />
+      <Route path="culture" element={<Cultures />} />
+      <Route path="venues" element={<Venues />} />
+      <Route path="favourite" element={<Favourite />} />
+      <Route path="cart" element={<Cart />} /> */}
 
       <Route path="/*" element={<Error />} />
     </Route>

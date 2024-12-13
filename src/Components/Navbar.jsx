@@ -6,7 +6,7 @@ const NavBar = () => {
   const { user, signOut } = useContext(UserContext);
 
   return (
-    <div className="Navbar flex flex-col justify-center items-center m-4">
+    <div className="Navbar flex flex-col justify-center items-center m-4  bg-red-300">
       <div className="bg-stone-500 shadow-md w-full flex justify-between items-center p-4">
         <Link to="/">
           <button className="text-4xl font-Abril text-white">GatherHub</button>
@@ -100,7 +100,7 @@ const NavBar = () => {
       <div className="bg-stone-500 shadow-md w-full mt-4 flex justify-center items-center p-4">
         <nav>
           <ul className="flex space-x-6 text-white">
-            <Link to="/home">
+            <Link to="/">
               <li className="hover:underline cursor-pointer">Home</li>
             </Link>
             <Link to="/shows">
@@ -117,6 +117,9 @@ const NavBar = () => {
             </Link>
             <Link to="/venues">
               <li className="hover:underline cursor-pointer">Venues</li>
+            </Link>
+            <Link to="/venues">
+              <li className="hover:underline cursor-pointer">Favourite</li>
             </Link>
           </ul>
         </nav>
